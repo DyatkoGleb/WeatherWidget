@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="eel.js"></script>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather</title>
+</head>
+
+<body>
+    <main class="position-absolute">
+        <div class="exchange-rate position-absolute">
+            <div>
+                <div class="valute d-inline">&#36;</div>
+                <div class="d-inline" id="dollar"></div>
+            </div>
+            <div>
+                <div class="valute d-inline">&euro;</div>
+                <div class="d-inline" id="euro"></div>
+            </div>
+        </div>
+
+        <div class="btn-hint" id="btn-hint">?</div>
+        
+        <div class="btn-clear-storage position-absolute" id="btn-clear-storage" onclick="clearStorage()">Clear</div>
+
+        <div class="wrapper">
+            <div class="card-container">
+                <div class="card position-relative" id="card">
+                    <div class="today" id="today-side-card">
+                        <div class="text-center" id="date">Now in</div> 
+
+                        <div class="d-flex align-items-center position-relative">
+                            <div class="location" contenteditable id="location">Volgograd</div>
+                            <div class="btn-search position-absolute d-none" id="btn-search" onclick="displayWeather()"></div>
+                        </div>
+
+                        <div class="info text-center">
+                            <div id="status"></div>
+                            <div id="time"></div>
+                            <div class="temp" id="temp"></div>
+                            <div class="d-flex text-center">
+                                <div class="temp-min" id="temp-min"></div>
+                                <div class="temp-max" id="temp-max"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hint position-absolute text-center" id="hint-side-card">
+                        <span class="bold">Enter</span> - сменить город / отправить запрос
+                        <br><br>
+                        <span class="bold">Стрелки (влево/вправо)</span> - смена инфы
+                        <br><br>
+                        <span class="bold">Стрелки (вверх/вниз)</span> - прокрутка инфы
+                        <br><br>
+                        <span class="bold">RCtrl</span> - сменить хранилище
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <div class="btn-change-view position-relative" id="btn-change-wiew" onclick="changeView()">
+                    <div class="top-side-arrow position-absolute"></div>
+                    <div class="bot-side-arrow position-absolute"></div>
+                </div>
+
+                <hr>
+
+                <div class="btn-change-resource DB" id="btn-change-resource" onclick="changeResource()"></div>
+            </div>
+
+            <div class="view-block d-flex position-relative" id="view-block">
+                <div class="last-week position-relative w-100">
+                    <div class="d-flex justify-content-between">
+                        <div class="title-table">Last week</div>
+                        <div class="">min C&deg;</div>
+                        <div class="">max C&deg;</div>
+                        <div class="">hum %</div>
+                    </div>
+        
+                    <div class="list-days" id="list-days"></div>
+                </div>
+
+                <div class="data-storage position-relative w-100" id="data-storage">
+                    <div class="d-flex justify-content-between">
+                        <div class="title-table" id="title-data-storage-table">From DB        </div>
+                        <div class="">date            </div>
+                        <div class="">min C&deg;</div>
+                        <div class="">max C&deg;</div>
+                        <div class="">hum %</div>
+                    </div>
+
+                    <div class="list-all-queries" id="list-all-queries"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="js/script.js"></script>
+</body>
+
+</html>

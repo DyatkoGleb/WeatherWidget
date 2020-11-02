@@ -1,0 +1,7 @@
+[{"date": "2020-10-27", "mint": 5.4, "maxt": 8.3, "location": "Oslo", "humidity": 98.05}, {"date": "2020-10-28", "mint": 5.9, "maxt": 9.9, "location": "Oslo", "humidity": 90.57},
+{"date": "2020-10-27", "mint": 21.9, "maxt": 32.0, "location": "Dubai", "humidity": 35.5},
+{"date": "2020-10-28", "mint": 22.9, "maxt": 32.0, "location": "Dubai", "humidity": 47.37},
+{"date": "2020-10-27", "mint": 14.1, "maxt": 20.6, "location": "Tokyo", "humidity": 64.73},
+{"date": "2020-10-28", "mint": 13.5, "maxt": 19.2, "location": "Tokyo", "humidity": 73.14},
+{"date": "2020-10-27", "mint": 9.0, "maxt": 16.0, "location": "Milan", "humidity": 84.12},
+{"date": "2020-10-28", "mint": 7.0, "maxt": 18.0, "location": "Milan", "humidity": 82.98}]
